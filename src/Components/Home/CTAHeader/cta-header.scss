@@ -1,0 +1,43 @@
+@import '../../../Styles/config';
+
+.cta-container{
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(
+        to bottom right,
+        rgba(255,255,255, 0.8),
+        rgba(#4a9ff5, 0.6)
+    ), url("https://images.unsplash.com/photo-1479839672679-a46483c0e7c8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=3346&q=80");
+    background-size: cover;
+    background-position: 0px 20%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: flex-end;
+
+    .cta-text{
+        height: 65%;
+        padding: 5%;
+        p{
+            color: $accent-color;
+            font-size: 45px;
+            font-family: $secondary-font;
+            margin-bottom: 10px;
+        }
+
+
+    }
+
+    .cta-button-container{
+        margin-top: 10%;
+        width: 100%;
+        text-align: center;
+
+        .cta-button{
+            padding: 1em;
+            font-size: 18px;
+            width: 100%;
+        }
+
+    }
+}

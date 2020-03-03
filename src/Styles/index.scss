@@ -1,0 +1,98 @@
+@import 'config';
+@import 'responsive';
+@import 'button';
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: $default-font-family;
+    outline: none;
+    scroll-behavior: smooth;
+}
+
+.paginator{
+    display: flex;
+    padding: 1.5em;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+
+    button{
+        padding: 0.6em;
+        font-size: 18px;
+    }
+
+}
+
+.cards-container{
+    display: flex;
+    flex-direction: column;
+}
+
+.card{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    background-color: $card-color;
+    border-radius: 25px;
+    margin: 1.5em;
+
+    &-image{
+        border-radius: 25px 25px 0px 0px;
+        height: 350px;
+        width: 100%;
+        object-fit: cover;
+        object-position: center;
+    }
+
+    &-text-container{
+        padding: 2em;
+    }
+
+    &-title{
+        font-family: $secondary-font;
+        font-size: 1.5em;
+        color: $accent-color;
+        padding: 1em;
+        transition: all 0.3s;
+    }
+
+    i{
+        font-size: 3em;
+        color: $accent-color;
+    }
+}
+
+
+
+body{
+    background-color: $background-color;
+    color: $text-color;
+    font-family: $default-font-family;
+    height: 100vh;
+    line-height: 1;
+
+    .subtitle{
+        font-size: 3em;
+        color: $accent-color;
+        font-family: $secondary-font;
+        padding: 0 1rem;
+    }
+
+    .logo-container{
+        display: flex;
+        align-items: center;
+        .logo{
+            font-size: 30px;
+            font-family: $secondary-font;
+            color: $accent-color;
+            padding-right: 5px;
+        }
+        
+        .second{
+            color: $text-color;
+            font-size: 25px;
+        }
+    }
+}

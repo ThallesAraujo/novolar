@@ -1,0 +1,279 @@
+@media screen and (min-width: 768px) {
+  .container {
+    padding-top: 1em !important;
+  }
+  .spinner-container p {
+    position: absolute;
+    z-index: 10;
+    top: 40% !important;
+    left: 50% !important;
+  }
+  .spinner-container .spinner {
+    position: absolute;
+    z-index: 10;
+    top: 50% !important;
+    left: 50% !important;
+  }
+  .logo-container {
+    z-index: 2;
+    position: absolute;
+    width: 30%;
+  }
+  .menu-btn {
+    visibility: hidden;
+  }
+  .navbar .navbar-container {
+    height: 5rem !important;
+  }
+  .navbar .nav {
+    visibility: visible;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 100%;
+  }
+  .navbar .nav .menu-nav {
+    visibility: visible;
+    position: absolute;
+    right: 0;
+    top: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    height: 5em;
+    width: 20%;
+    background-color: transparent;
+    text-align: right;
+  }
+  .navbar .nav .menu-nav-item {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    vertical-align: middle;
+    display: inline;
+    font-size: 1em;
+  }
+  .cards-building-details .card {
+    width: 15vw !important;
+  }
+  .cards-building-details .card-text-container {
+    font-size: 16px !important;
+  }
+  .cards-container {
+    padding: 3em !important;
+    display: -ms-grid !important;
+    display: grid !important;
+    -ms-grid-columns: (1fr)[3];
+        grid-template-columns: repeat(3, 1fr);
+  }
+  .cards-container .card-text-container {
+    padding: 3em;
+  }
+  .padded {
+    padding-left: 3em !important;
+  }
+  .centered {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: start !important;
+        -ms-flex-pack: start !important;
+            justify-content: start !important;
+    -webkit-box-align: start !important;
+        -ms-flex-align: start !important;
+            align-items: flex-start !important;
+  }
+  .container.opened {
+    padding: 3em !important;
+    display: -ms-grid !important;
+    display: grid !important;
+    -ms-grid-columns: (3fr)[3];
+        grid-template-columns: repeat(3, 3fr);
+  }
+  .details .indicator {
+    padding: 2em !important;
+  }
+  .horizontal-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal !important;
+    -webkit-box-direction: normal !important;
+        -ms-flex-direction: row !important;
+            flex-direction: row !important;
+  }
+}
+
+button {
+  position: relative;
+  padding: 1em;
+  border-radius: 25px;
+  text-decoration: none;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  color: #2a5b8c;
+  border: 2px solid #2a5b8c;
+  background: none;
+  z-index: 1;
+  cursor: pointer;
+  transition: 0.08s ease-in;
+  -o-transition: 0.08s ease-in;
+  -ms-transition: 0.08s ease-in;
+  -moz-transition: 0.08s ease-in;
+  -webkit-transition: 0.08s ease-in;
+}
+
+.fill:hover {
+  color: #d9edff;
+}
+
+.fill:before {
+  content: "";
+  position: absolute;
+  background: #2a5b8c !important;
+  bottom: 50%;
+  left: 50%;
+  right: 50%;
+  top: 50%;
+  width: 0;
+  height: 0;
+  z-index: -1;
+  border-radius: 25px;
+  -webkit-transition: ease-in-out .5s;
+  transition: ease-in-out .5s;
+  -webkit-transform: scale(1) translateX(-50%) translateY(-50%);
+          transform: scale(1) translateX(-50%) translateY(-50%);
+}
+
+.fill:hover:before {
+  width: 100%;
+  height: 100%;
+  border: 2px solid #2a5b8c;
+}
+
+.btn-big {
+  font-size: 16px;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Lato";
+  outline: none;
+  scroll-behavior: smooth;
+}
+
+.paginator {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 1.5em;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 100%;
+}
+
+.paginator button {
+  padding: 0.6em;
+  font-size: 18px;
+}
+
+.cards-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+  background-color: #b3dbff;
+  border-radius: 25px;
+  margin: 1.5em;
+}
+
+.card-image {
+  border-radius: 25px 25px 0px 0px;
+  height: 350px;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+
+.card-text-container {
+  padding: 2em;
+}
+
+.card-title {
+  font-family: "Titillium Web";
+  font-size: 1.5em;
+  color: #2a5b8c;
+  padding: 1em;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.card i {
+  font-size: 3em;
+  color: #2a5b8c;
+}
+
+body {
+  background-color: #d9edff;
+  color: #2b2a2f;
+  font-family: "Lato";
+  height: 100vh;
+  line-height: 1;
+}
+
+body .subtitle {
+  font-size: 3em;
+  color: #2a5b8c;
+  font-family: "Titillium Web";
+  padding: 0 1rem;
+}
+
+body .logo-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body .logo-container .logo {
+  font-size: 30px;
+  font-family: "Titillium Web";
+  color: #2a5b8c;
+  padding-right: 5px;
+}
+
+body .logo-container .second {
+  color: #2b2a2f;
+  font-size: 25px;
+}
+/*# sourceMappingURL=index.css.map */

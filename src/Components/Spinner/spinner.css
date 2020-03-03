@@ -1,0 +1,29 @@
+.spinner-container {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+  background-color: rgba(217, 237, 255, 0.5);
+  position: absolute;
+  z-index: 9;
+}
+
+.spinner-container p {
+  position: absolute;
+  z-index: 10;
+  top: 35%;
+  left: 40vw;
+}
+
+.spinner-container .spinner {
+  position: absolute;
+  z-index: 10;
+  top: 40%;
+  left: 40vw;
+}
+
+.hidden {
+  display: none;
+}
+/*# sourceMappingURL=spinner.css.map */

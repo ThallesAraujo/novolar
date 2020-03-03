@@ -11,6 +11,9 @@
 # production
 /build
 
+#private token key
+/src/Utils/api_token.json
+
 # misc
 .DS_Store
 .env.local

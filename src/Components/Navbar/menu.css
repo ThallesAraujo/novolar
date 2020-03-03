@@ -1,0 +1,192 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  z-index: 2;
+  width: 100%;
+}
+
+.navbar .navbar-container {
+  height: 4rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  padding: 1rem;
+}
+
+.navbar .navbar-container.solid-nav {
+  background-color: #d9edff !important;
+  -webkit-transition: background-color 0.2s linear;
+  transition: background-color 0.2s linear;
+}
+
+.navbar .menu-btn {
+  position: absolute;
+  z-index: 1;
+  right: 2rem;
+  top: 2rem;
+  height: 20px;
+  width: 28px;
+  cursor: pointer;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+.navbar .menu-btn-burger {
+  position: absolute;
+  top: 0.5 rem;
+  width: 28px;
+  background-color: #2b2a2f;
+  border-radius: 3px;
+  height: 3px;
+  right: 0;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+.navbar .menu-btn-burger::before {
+  content: '';
+  position: absolute;
+  top: -8px;
+  width: 28px;
+  background-color: #2b2a2f;
+  border-radius: 3px;
+  height: 3px;
+  right: 0;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+.navbar .menu-btn-burger::after {
+  content: '';
+  position: absolute;
+  top: 8px;
+  width: 20px;
+  background-color: #2b2a2f;
+  border-radius: 3px;
+  height: 3px;
+  right: 0;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+.navbar .menu-btn-burger.open {
+  -webkit-transform: rotate(720deg);
+          transform: rotate(720deg);
+  background-color: transparent !important;
+}
+
+.navbar .menu-btn-burger.open::before {
+  -webkit-transform: rotate(45deg) translate(5px, 8px);
+          transform: rotate(45deg) translate(5px, 8px);
+}
+
+.navbar .menu-btn-burger.open::after {
+  width: 28px !important;
+  -webkit-transform: rotate(-45deg) translate(3px, -7px);
+          transform: rotate(-45deg) translate(3px, -7px);
+}
+
+.nav {
+  -webkit-transition: background-color 0.2s linear;
+  transition: background-color 0.2s linear;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  visibility: hidden;
+  height: 3em;
+}
+
+.nav.open {
+  visibility: visible;
+}
+
+.nav .menu-nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column wrap;
+          flex-flow: column wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+  background-color: #c0e1ff;
+  list-style: none;
+  padding-right: 1rem;
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+.nav .menu-nav.open {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+}
+
+.nav .menu-nav-item {
+  font-size: 2rem;
+  padding: 2rem 0;
+  -webkit-transform: translateX(-100vw);
+          transform: translateX(-100vw);
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+.nav .menu-nav-item.open {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+}
+
+.nav .menu-nav-link {
+  text-decoration: none;
+  color: #2b2a2f;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+.nav .menu-nav-link.active {
+  color: #2a5b8c;
+}
+
+.nav .menu-nav-link::after {
+  content: '';
+  display: block;
+  width: 0;
+  height: 2px;
+  background: #2a5b8c;
+  -webkit-transition: width .3s;
+  transition: width .3s;
+}
+
+.nav .menu-nav-link:hover::after {
+  width: 100%;
+}
+
+.nav .menu-nav-link:hover {
+  color: #2a5b8c;
+}
+
+.menu-nav-item:nth-child(1) {
+  -webkit-transition-delay: 0.25s;
+          transition-delay: 0.25s;
+}
+
+.menu-nav-item:nth-child(2) {
+  -webkit-transition-delay: 0.35s;
+          transition-delay: 0.35s;
+}
+
+.menu-nav-item:nth-child(3) {
+  -webkit-transition-delay: 0.45s;
+          transition-delay: 0.45s;
+}
+/*# sourceMappingURL=menu.css.map */

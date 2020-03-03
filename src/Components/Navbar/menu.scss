@@ -1,0 +1,179 @@
+@import '../../Styles/config';
+
+@mixin menu-icon-defaults{
+    background-color: $text-color;
+    border-radius: 3px;
+    height: 3px;
+    right: 0;
+    transition: all 0.5s ease-in-out;
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    z-index: 2;
+    width: 100%;
+
+    .navbar-container{
+        height: 4rem;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        padding: 1rem;
+
+        &.solid-nav{
+            background-color: $background-color!important;
+            transition: background-color 0.2s linear;
+        }
+    }
+
+    
+
+    .menu-btn{
+        position: absolute;
+        z-index: 1;
+        right: 2rem;
+        top: 2rem;
+        height: 20px;
+        width: 28px;
+        cursor: pointer;
+        //mixin transition-ease
+        transition: all 0.5s ease-in-out;
+
+        //botão de menu em CSS
+        &-burger{
+            //meio
+            position: absolute;
+            top: 0.5 rem;
+            width: 28px;
+            @include menu-icon-defaults();
+
+            //cima
+            &::before{
+                content: '';
+                position: absolute;
+                top: -8px;
+                width: 28px;
+                @include menu-icon-defaults();
+            }
+
+            //baixo
+            &::after{
+                content: '';
+                position: absolute;
+                top: 8px;
+                width: 20px;
+                @include menu-icon-defaults();
+            }
+
+            //animacao para girar e formar o "X"
+            &.open{
+
+                //meio desaparece
+                transform: rotate(720deg);
+                background-color: transparent!important;
+                
+                //cima
+                &::before{
+                    //translate(X, Y)
+                    transform: rotate(45deg) translate(5px, 8px);
+                }
+
+                //baixo
+                &::after{
+                    width: 28px!important;
+                    transform: rotate(-45deg) translate(3px, -7px);
+                }
+
+            }
+
+        }
+
+    }
+
+}
+
+//menu (Mobile)
+.nav{
+    
+    transition: background-color 0.2s linear;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    visibility: hidden;
+    height: 3em;
+
+    &.open{
+        visibility: visible;
+    }
+
+    .menu-nav{
+        display: flex;
+        flex-flow: column wrap;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        overflow: hidden;
+        background-color: darken($color: $background-color, $amount: 5);
+        list-style: none;
+        padding-right: 1rem;
+        transform: translateX(-100%);
+        transition: all 0.5s ease-in-out;
+
+        &.open{
+            transform: translateX(0);
+        }
+
+
+        &-item{
+            font-size: 2rem;
+            padding: 2rem 0;
+            transform: translateX(-100vw);
+            transition: all 0.5s ease-in-out;
+
+
+            &.open{
+                transform: translateX(0);
+            }
+
+        }
+
+        &-link{
+            text-decoration: none;
+            color: $text-color;
+            transition: all 0.5s ease-in-out;
+
+            &.active{
+                color: $accent-color;
+            }
+
+            &::after{
+                content: '';
+                display: block;
+                width: 0;
+                height: 2px;
+                background: $accent-color;
+                transition: width .3s
+            }
+
+            &:hover::after{
+                width: 100%;
+            }
+
+            &:hover{
+                color: $accent-color;
+            }
+
+        }
+    }
+
+}
+
+
+@for $i from 1 through 3{
+    .menu-nav-item:nth-child(#{$i}){
+        transition-delay:  ($i * 0.1s) + 0.15s;
+    }
+}

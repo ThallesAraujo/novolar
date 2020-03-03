@@ -1,26 +1,36 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import BuildingsController from './Controllers/buildings.controller';
+import MainController from './Controllers/main.controller';
+import FavoritesController from './Controllers/favorites.controller';
+import DetailsController from './Controllers/details.controller';
+import Navbar from './Components/Navbar/nav.component'
+import Footer from './Components/Footer/footer.component'
+import Spinner from './Components/Spinner/spinner.component';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route
+} from 'react-router-dom';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+
+const App = () => {
+
+    return (
+      <Router>
+        <Spinner  />
+        <Navbar />
+        <div>
+          <Switch>
+            <Route path="/" exact={true} component={MainController}></Route>
+            <Route path="/imoveis" component={BuildingsController}></Route>
+            <Route path="/favoritos" component={FavoritesController}></Route>
+            <Route path="/detalhes" component={DetailsController}></Route>
+          </Switch>
+        </div>
+        <Footer />
+      </Router>
+    );
+  }
+  
 
 export default App;

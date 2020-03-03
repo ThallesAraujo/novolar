@@ -1,0 +1,142 @@
+@import 'config';
+
+@mixin media-md {
+    @media screen and (min-width: 768px){
+        @content
+    }
+}
+
+@mixin media-lg {
+    @media screen and (min-width: 1024px){
+        @content
+    }
+}
+
+@mixin media-xl {
+    @media screen and (min-width: 1600px){
+        @content
+    }
+}
+
+@include media-md{
+
+    .container{
+        padding-top: 1em!important;
+    }
+    
+    .spinner-container{
+        p{
+            position: absolute;
+            z-index: 10;
+            top: 40%!important;
+            left: 50%!important;
+        }
+    
+        .spinner{
+            position: absolute;
+            z-index: 10;
+            top: 50%!important;
+            left: 50%!important;
+        }
+    
+    }
+
+    .logo-container{
+        z-index: 2;
+        position: absolute;
+        width: 30%;
+    }
+
+    .menu-btn{
+        visibility: hidden;
+    }
+
+    .navbar {
+        .navbar-container{
+            height: 5rem!important;
+        }
+
+        .nav{
+            visibility: visible;
+            display: flex;
+            align-items: center;
+            width: 100%;
+            .menu-nav{
+                visibility: visible;
+                position: absolute;
+                right: 0;
+                top: 0;
+                display: flex;
+                transform: translateY(0);
+                height: 5em;
+                width: 20%;
+                background-color: transparent;
+                text-align: right;
+    
+                &-item{
+                    transform: translateY(0);
+                    vertical-align: middle;
+                    display: inline;
+                    font-size: 1em;
+                }
+    
+                
+            }
+        }
+    }
+
+    .cards-building-details{
+        .card{
+            width: 15vw!important;
+            &-text-container{
+                font-size: 16px!important;
+            }
+        }
+    }
+
+    .cards-container{
+        padding: 3em!important;
+        display: grid!important;
+        grid-template-columns: repeat(3, 1fr);
+
+        .card{
+            &-text-container{
+                padding: 3em;
+            }
+        }
+
+    }
+
+    .padded{
+        padding-left: 3em!important;
+    }
+
+    .centered{
+        display: flex;
+        justify-content: start!important;
+        align-items: flex-start!important;
+    }
+
+    .container{
+
+        &.opened{  
+            padding: 3em!important;
+            display: grid!important;
+            grid-template-columns: repeat(3, 3fr);
+        }
+
+    }
+
+    .details{    
+        .indicator{
+            padding: 2em!important;
+        }
+    }
+
+    
+    .horizontal-container{
+        display: flex;
+        flex-direction: row!important;
+    }
+
+}

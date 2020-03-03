@@ -1,0 +1,55 @@
+.favorited {
+  color: #d9edff;
+  background-color: #2a5b8c;
+}
+
+.favorited i {
+  color: #d9edff;
+}
+
+.details {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.details .indicator {
+  font-size: 16px;
+  padding: 1em;
+}
+
+.details .indicator i {
+  font-size: 2em;
+}
+
+.details button {
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  max-width: 80px;
+}
+
+.details button i {
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.details button:hover {
+  color: #659bd1;
+  border-color: #659bd1;
+}
+
+.details button:hover i {
+  color: #659bd1;
+}
+
+.title-link:hover {
+  color: #659bd1;
+}
+/*# sourceMappingURL=building-card.css.map */

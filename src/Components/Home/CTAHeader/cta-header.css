@@ -1,0 +1,46 @@
+.cta-container {
+  width: 100%;
+  height: 100vh;
+  background-image: -webkit-gradient(linear, left top, right bottom, from(rgba(255, 255, 255, 0.8)), to(rgba(74, 159, 245, 0.6))), url("https://images.unsplash.com/photo-1479839672679-a46483c0e7c8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=3346&q=80");
+  background-image: linear-gradient(to bottom right, rgba(255, 255, 255, 0.8), rgba(74, 159, 245, 0.6)), url("https://images.unsplash.com/photo-1479839672679-a46483c0e7c8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=3346&q=80");
+  background-size: cover;
+  background-position: 0px 20%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.cta-container .cta-text {
+  height: 65%;
+  padding: 5%;
+}
+
+.cta-container .cta-text p {
+  color: #2a5b8c;
+  font-size: 45px;
+  font-family: "Titillium Web";
+  margin-bottom: 10px;
+}
+
+.cta-container .cta-button-container {
+  margin-top: 10%;
+  width: 100%;
+  text-align: center;
+}
+
+.cta-container .cta-button-container .cta-button {
+  padding: 1em;
+  font-size: 18px;
+  width: 100%;
+}
+/*# sourceMappingURL=cta-header.css.map */

@@ -1,0 +1,79 @@
+.favorited {
+  color: #d9edff;
+  background-color: #2a5b8c;
+}
+
+.favorited i {
+  color: #d9edff;
+}
+
+.container-full {
+  width: 100vw;
+  height: 100vh;
+  padding: 2em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.container-full i {
+  color: #2a5b8c;
+  font-size: 20vh;
+}
+
+.details {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding-top: 2em;
+}
+
+.details .indicator {
+  font-size: 16px;
+  padding: 1em;
+}
+
+.details .indicator i {
+  font-size: 2em;
+}
+
+.details button {
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.details button i {
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.details button:hover {
+  color: #659bd1;
+  border-color: #659bd1;
+}
+
+.details button:hover i {
+  color: #659bd1;
+}
+
+.title-link:hover {
+  color: #659bd1;
+}
+/*# sourceMappingURL=favorites.css.map */
